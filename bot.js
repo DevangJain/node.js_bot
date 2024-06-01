@@ -6,7 +6,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const rateLimit = require('telegraf-ratelimit')
-var bot_token = ' '; //YOUR BOT TOKEN HERE
+var bot_token = '7235406804:AAGd2T-FJrhdfHhDcBx5Rb6Nr_Wlx72g1xU'; //YOUR BOT TOKEN HERE
 const bot = new Telegraf(bot_token);
 let db;
 const balance = new BaseScene('balance')
@@ -502,7 +502,7 @@ bot.hears('/panel', async (ctx) => {
         } else {
             var with_stat = '🚫 Off'
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             bot.telegram.sendMessage(ctx.from.id,
                 "<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channels: " + final + "💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
@@ -566,7 +566,7 @@ bot.hears('🎁 Bonus', async (ctx) => {
     }
 })
 bot.hears('/broadcast', async (ctx) => {
-    if (ctx.from.id == 2131044278,1955618402 ) {
+    if (ctx.from.id == 834142168 ) {
         ctx.replyWithMarkdown(
             '*📨 Enter Message To Broadcast*', { reply_markup: { keyboard: [['⛔ Cancel']], resize_keyboard: true } }
         )
@@ -1072,7 +1072,7 @@ bot.action('botstat', async (ctx) => {
         } else {
             var with_stat = '🚫 Off'
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             ctx.editMessageText("<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channel:" + final + "\n\t\t\t\t💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
         }
@@ -1115,7 +1115,7 @@ bot.action('withstat', async (ctx) => {
             var with_stat = '✅ On'
             db.collection('admindb').updateOne({ admin: "admin" }, { $set: { withstat: 'ON' } }, { upsert: true })
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             ctx.editMessageText("<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channel:" + first + "\n\t\t\t\t💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
         }
@@ -1905,7 +1905,7 @@ bot.hears('/panel', async (ctx) => {
         } else {
             var with_stat = '🚫 Off'
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             bot.telegram.sendMessage(ctx.from.id,
                 "<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channels: " + final + "💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
@@ -1969,7 +1969,7 @@ bot.hears('🎁 Bonus', async (ctx) => {
     }
 })
 bot.hears('/broadcast', async (ctx) => {
-    if (ctx.from.id == 2131044278,1955618402 ) {
+    if (ctx.from.id == 834142168 ) {
         ctx.replyWithMarkdown(
             '*📨 Enter Message To Broadcast*', { reply_markup: { keyboard: [['⛔ Cancel']], resize_keyboard: true } }
         )
@@ -2475,7 +2475,7 @@ bot.action('botstat', async (ctx) => {
         } else {
             var with_stat = '🚫 Off'
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             ctx.editMessageText("<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channel:" + final + "\n\t\t\t\t💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
         }
@@ -2518,7 +2518,7 @@ bot.action('withstat', async (ctx) => {
             var with_stat = '✅ On'
             db.collection('admindb').updateOne({ admin: "admin" }, { $set: { withstat: 'ON' } }, { upsert: true })
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 834142168 ) {
             ctx.editMessageText("<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channel:" + first + "\n\t\t\t\t💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
         }
