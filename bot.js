@@ -6,7 +6,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const rateLimit = require('telegraf-ratelimit')
-var bot_token = '7235406804:AAGd2T-FJrhdfHhDcBx5Rb6Nr_Wlx72g1xU'; //YOUR BOT TOKEN HERE
+var bot_token = '7303781003:AAFstuZYr-zrrcwYKSUYrVU-TPcwneK6RX0'; //YOUR BOT TOKEN HERE
 const bot = new Telegraf(bot_token);
 let db;
 const balance = new BaseScene('balance')
@@ -1409,7 +1409,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const rateLimit = require('telegraf-ratelimit')
-var bot_token = ' '; //YOUR BOT TOKEN HERE
+var bot_token = '7303781003:AAFstuZYr-zrrcwYKSUYrVU-TPcwneK6RX0'; //YOUR BOT TOKEN HERE
 const bot = new Telegraf(bot_token);
 let db;
 const balance = new BaseScene('balance')
