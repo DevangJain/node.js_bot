@@ -1401,7 +1401,7 @@ function arrayRemove(arr, value) {
         }
     }
     return false;
- }const mongo = require('mongodb').MongoClient;
+ }
 const { Telegraf, session, Extra, Markup, Scenes } = require('telegraf');
 const axios = require ("axios");
 const ratelimit = require("ratelimit")
